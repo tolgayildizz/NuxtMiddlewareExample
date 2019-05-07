@@ -56,10 +56,12 @@ export default {
             localStorage.removeItem("authKey");
         },
         setCookie() {
-            Cookie.set('authKey', this.cookieValue);
+            //Cookie.set('authKey', this.cookieValue);
+            this.$store.commit("setAuthKey", this.cookieValue);
         },
         getCookie() {
-            this.fromCookie = Cookie.get('authKey');
+            //this.fromCookie = Cookie.get('authKey');
+            this.fromCookie = this.$store.getters.getAuthKey;
         },
         deleteCookie() {
             Cookie.remove('authKey');
