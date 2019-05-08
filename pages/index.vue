@@ -30,7 +30,6 @@
                 </div>
             </div>
         </div>
-    
     </div>
 </template>
 
@@ -52,7 +51,7 @@ export default {
         getValue() {
             this.fromStorage = localStorage.getItem("authKey");
         },
-        deleteValue() { 
+        deleteValue() {
             localStorage.removeItem("authKey");
         },
         setCookie() {

@@ -43,6 +43,8 @@
     },
     methods : {
       onSubmit(){
+        this.$store.dispatch('login', "auth-key-from-firebase");
+        this.$router.push("/");
         console.log(this.user)
       }
     }

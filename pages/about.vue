@@ -4,7 +4,7 @@
       <div class="col-md-6 offset-3">
         <h3>Nuxt.js | Auth İşlemleri</h3>
         <p>Bu bölge çok gizli bölgedir.. Ancak giriş yapanların görmesi gerekir. Ondan dolayı lütfen ilk olarak giriş yapınız..</p>
-        <button class="btn btn-dark">Çıkış yap</button>
+        <!-- <button class="btn btn-dark">Çıkış yap</button> -->
       </div>
     </div>
   </div>
