@@ -12,9 +12,20 @@
             </ul>
             <ul class="navbar-nav my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Çıkış Yap</a>
+                    <a @click.prevent="logout" class="nav-link" href="#">Çıkış Yap</a>
                 </li>
             </ul>
         </div>
     </nav>
 </template>
+
+<script>
+export default {
+    methods: {
+        logout() {
+            this.$store.dispatch("logout");
+            this.$router.push("/auth");
+        }
+    }
+}
+</script>

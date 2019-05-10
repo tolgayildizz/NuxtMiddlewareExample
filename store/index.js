@@ -15,6 +15,7 @@ const createStore = () => {
             //Authkeyi kaldırır
             clearAuthKey(state) {
                 Cookie.remove("authKey");
+                localStorage.removeItem("authKey");
                 state.authKey = null;
             },
 
@@ -60,6 +61,11 @@ const createStore = () => {
                 Cookie.set("authKey", authKey);
                 localStorage.setItem("authKey", authKey);
                 vuexContext.commit("setAuthKey", authKey);
+            },
+            
+            //Auth Keyin kaldırılarak çıkış yapılması
+            logout(vuexContext) {
+                vuexContext.commit('clearAuthKey');
             }
         },
         getters: {

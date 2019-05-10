@@ -52,5 +52,8 @@ module.exports = {
     extend(config, ctx) {
       
     }
+  },
+  env: {
+    firebaseAPIKEY : "AIzaSyDlJCcnGndcTN37AmrQMCdDsoZr8SpGMxo"
   }
 }
