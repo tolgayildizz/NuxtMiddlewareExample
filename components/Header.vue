@@ -10,7 +10,7 @@
                     <a class="nav-link" href="#">Hakkımda</a>
                 </nuxt-link>
             </ul>
-            <ul class="navbar-nav my-2 my-lg-0">
+            <ul class="navbar-nav my-2 my-lg-0" :class="logoutClass" >
                 <li class="nav-item">
                     <a @click.prevent="logout" class="nav-link" href="#">Çıkış Yap</a>
                 </li>
@@ -25,6 +25,13 @@ export default {
         logout() {
             this.$store.dispatch("logout");
             this.$router.push("/auth");
+        }
+    },
+    computed: {
+        logoutClass() {
+            return {
+                'd-none' : !this.$store.getters.isAuthenticated
+            }
         }
     }
 }

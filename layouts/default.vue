@@ -8,7 +8,7 @@
 <script>
 import Header from '@/components/Header';
 export default {
-  middleware:["session-control","auth"],
+  
   components: {
     Header,
   }

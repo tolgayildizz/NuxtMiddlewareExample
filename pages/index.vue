@@ -44,6 +44,7 @@ export default {
             fromCookie: null
         }
     },
+    middleware:["session-control","auth"],
     methods: {
         setValue() {
             localStorage.setItem('authKey', this.storageValue);
