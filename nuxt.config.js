@@ -54,6 +54,6 @@ module.exports = {
     }
   },
   env: {
-    firebaseAPIKEY : "AIzaSyDlJCcnGndcTN37AmrQMCdDsoZr8SpGMxo"
+    
   }
 }
