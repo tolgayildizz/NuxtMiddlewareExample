@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _518e41ad = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */))
-const _8a18376c = () => interopDefault(import('..\\pages\\auth\\index.vue' /* webpackChunkName: "pages_auth_index" */))
-const _71461c72 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _4215a601 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _27b7e432 = () => interopDefault(import('../pages/auth/index.vue' /* webpackChunkName: "pages/auth/index" */))
+const _61cd80c6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -82,15 +82,15 @@ export function createRouter() {
 
     routes: [{
       path: "/about",
-      component: _518e41ad,
+      component: _4215a601,
       name: "about"
     }, {
       path: "/auth",
-      component: _8a18376c,
+      component: _27b7e432,
       name: "auth"
     }, {
       path: "/",
-      component: _71461c72,
+      component: _61cd80c6,
       name: "index"
     }],
 

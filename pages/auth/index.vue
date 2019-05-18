@@ -60,18 +60,10 @@ export default {
   },
   methods: {
     onSubmit() {
-      let authLink ="https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=";
-
-      if (this.isUser) {
-        authLink = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=";
-      }
-
-      axios.post(authLink + process.env.firebaseAPIKEY, {
-        email : this.user.email,
-        password : this.user.password,
-        returnSecureToken : true,
-      }).then(response => {
-        this.$store.dispatch("login", response.data.idToken);
+      this.$store.dispatch("authUser", {
+        isUser: this.isUser,
+        user:this.user,
+      }).then(response=> {
         this.$router.push("/");
       })
     }
